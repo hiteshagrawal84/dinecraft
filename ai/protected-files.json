@@ -1,0 +1,26 @@
+{
+  "protected": [
+    "functions.php",
+    "inc/**",
+    "includes/**",
+    "lib/**",
+    "woocommerce/**/*.php",
+    "template-parts/booking/**",
+    "template-parts/reservation/**",
+    "page-templates/booking*.php",
+    "page-templates/reservation*.php",
+    "page-templates/checkout*.php",
+    "page-templates/cart*.php",
+    "page-templates/account*.php",
+    "ajax/**",
+    "api/**",
+    "admin/**",
+    "*.pot",
+    "languages/**",
+    "composer.json",
+    "composer.lock",
+    "package.json",
+    "package-lock.json"
+  ],
+  "notes": "Never change booking, WooCommerce checkout/cart logic, payment gateways, REST routes, auth, or database schema. Presentation wrappers around these features may be restyled if listed as editable."
+}

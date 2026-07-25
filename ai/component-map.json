@@ -1,0 +1,38 @@
+{
+  "header": {
+    "files": ["header.php", "template-parts/header/**", "assets/css/**"],
+    "editable": true
+  },
+  "hero": {
+    "files": ["front-page.php", "template-parts/hero/**", "template-parts/home/**", "assets/css/**"],
+    "editable": true
+  },
+  "menu": {
+    "files": ["template-parts/menu/**", "page-templates/*menu*.php", "assets/css/**"],
+    "editable": true,
+    "dataSource": "wordpress"
+  },
+  "reservation": {
+    "files": ["template-parts/reservation/**", "template-parts/booking/**", "page-templates/*reserv*.php", "page-templates/*book*.php"],
+    "editable": true,
+    "businessLogicProtected": true
+  },
+  "gallery": {
+    "files": ["template-parts/gallery/**", "assets/css/**"],
+    "editable": true
+  },
+  "footer": {
+    "files": ["footer.php", "template-parts/footer/**", "assets/css/**"],
+    "editable": true
+  },
+  "woocommerce": {
+    "files": ["woocommerce/**", "assets/css/woocommerce*.css"],
+    "editable": false,
+    "businessLogicProtected": true,
+    "presentationOnly": ["assets/css/woocommerce*.css"]
+  },
+  "typography_colors": {
+    "files": ["style.css", "theme.json", "assets/css/**", "assets/scss/**"],
+    "editable": true
+  }
+}

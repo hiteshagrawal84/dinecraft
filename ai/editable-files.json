@@ -1,0 +1,32 @@
+{
+  "editable": [
+    "style.css",
+    "assets/css/**",
+    "assets/scss/**",
+    "assets/js/**",
+    "assets/images/**",
+    "css/**",
+    "js/**",
+    "sass/**",
+    "scss/**",
+    "header.php",
+    "footer.php",
+    "index.php",
+    "front-page.php",
+    "home.php",
+    "page.php",
+    "single.php",
+    "archive.php",
+    "search.php",
+    "404.php",
+    "sidebar.php",
+    "template-parts/**",
+    "templates/**",
+    "page-templates/**",
+    "blocks/**",
+    "parts/**",
+    "patterns/**",
+    "theme.json"
+  ],
+  "notes": "Prefer CSS variables, theme.json, and template markup. Do not hardcode dynamic WordPress data (menus, posts, products, reservations)."
+}

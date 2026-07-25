@@ -1,0 +1,27 @@
+{
+  "theme": "dinecraft",
+  "version": "1.0.0",
+  "repository": "https://github.com/hiteshagrawal84/dinecraft.git",
+  "preserveFunctionality": true,
+  "editable": {
+    "colors": true,
+    "typography": true,
+    "spacing": true,
+    "layout": true,
+    "components": true,
+    "images": true,
+    "animations": true,
+    "responsiveDesign": true
+  },
+  "protected": {
+    "database": true,
+    "authentication": true,
+    "booking": true,
+    "woocommerce": true,
+    "payments": true,
+    "api": true,
+    "admin": true,
+    "businessLogic": true
+  },
+  "notes": "Paths in editable-files.json / protected-files.json / component-map.json must be reconciled against the live repo tree. Prefer presentation-layer edits (CSS, template markup, assets) over PHP business logic."
+}

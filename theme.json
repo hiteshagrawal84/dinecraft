@@ -1,0 +1,105 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.5/theme.json",
+	"version": 2,
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"palette": [
+				{
+					"slug": "limestone",
+					"color": "#efeae2",
+					"name": "Limestone"
+				},
+				{
+					"slug": "ink",
+					"color": "#14110f",
+					"name": "Ink"
+				},
+				{
+					"slug": "oxblood",
+					"color": "#31161c",
+					"name": "Oxblood"
+				},
+				{
+					"slug": "brass",
+					"color": "#b8954a",
+					"name": "Antique Brass"
+				},
+				{
+					"slug": "parchment",
+					"color": "#faf7f1",
+					"name": "Parchment"
+				},
+				{
+					"slug": "muted",
+					"color": "#6d645b",
+					"name": "Muted"
+				},
+				{
+					"slug": "noir",
+					"color": "#0a0908",
+					"name": "Noir"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "\"Bodoni Moda\", \"Times New Roman\", Georgia, serif",
+					"slug": "display",
+					"name": "Display"
+				},
+				{
+					"fontFamily": "\"Figtree\", \"Segoe UI\", Helvetica, Arial, sans-serif",
+					"slug": "body",
+					"name": "Body"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "720px",
+			"wideSize": "1220px"
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--limestone)",
+			"text": "var(--wp--preset--color--ink)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--body)",
+			"fontWeight": "300",
+			"lineHeight": "1.7"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--display)",
+					"fontWeight": "500",
+					"lineHeight": "1.15"
+				}
+			},
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--oxblood)"
+				}
+			},
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--brass)",
+					"text": "var(--wp--preset--color--limestone)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--body)",
+					"fontSize": "0.72rem",
+					"fontWeight": "700",
+					"letterSpacing": "0.2em",
+					"textTransform": "uppercase"
+				},
+				"border": {
+					"radius": "0"
+				}
+			}
+		}
+	}
+}

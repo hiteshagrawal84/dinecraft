@@ -15,7 +15,7 @@ $phones = ! empty( $settings['contact_phones'] ) ? $settings['contact_phones'] :
 $emails = ! empty( $settings['contact_emails'] ) ? $settings['contact_emails'] : array( $settings['footer_email'] );
 ?>
 <footer class="yr-footer">
-	<div class="yr-footer__line"></div>
+	<div class="yr-footer__line" aria-hidden="true"></div>
 	<div class="yr-container yr-footer__grid">
 		<div class="yr-footer__brand">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="yr-logo" style="margin-bottom:1.5rem;">

@@ -13,7 +13,7 @@ if ( ! $item ) {
 $image = yr_image_url( $item->ID, '_yr_image_url' );
 $badge = yr_meta( $item->ID, '_yr_badge' );
 $price = yr_meta( $item->ID, '_yr_price' );
-$color = function_exists( 'yr_badge_color' ) ? yr_badge_color( $badge ) : '#C9882A';
+$color = function_exists( 'yr_badge_color' ) ? yr_badge_color( $badge ) : '#B8954A';
 ?>
 <article class="yr-menu-card">
 	<div class="yr-menu-card__image">

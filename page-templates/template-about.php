@@ -27,8 +27,8 @@ get_template_part( 'template-parts/page', 'header', array(
 			<p class="yr-text"><?php esc_html_e( "Your Restaurant was founded in 2012 by chef Mathieu Laurent and restaurateur Rania Hosseini, united by a shared belief: that the best restaurants don't just serve food — they create the conditions for life's most meaningful conversations.", 'dinecraft' ); ?></p>
 			<p class="yr-text"><?php esc_html_e( "We remain a family restaurant in every sense. Decisions are made slowly, with care, and in service of one goal: to give every guest an evening they'll still be talking about a year from now.", 'dinecraft' ); ?></p>
 		</div>
-		<div class="yr-about-image" style="position:relative;">
-			<img src="<?php echo esc_url( yr_placeholder( 'about' ) ); ?>" alt="<?php esc_attr_e( 'Dining room', 'dinecraft' ); ?>" width="700" height="820" style="width:100%;height:520px;object-fit:cover;" loading="lazy" decoding="async" />
+		<div class="yr-about-image">
+			<img src="<?php echo esc_url( yr_placeholder( 'about' ) ); ?>" alt="<?php esc_attr_e( 'Dining room', 'dinecraft' ); ?>" width="700" height="820" loading="lazy" decoding="async" />
 			<div class="yr-about-badge">
 				<strong>2012</strong>
 				<span><?php esc_html_e( 'Est. Ahmedabad', 'dinecraft' ); ?></span>

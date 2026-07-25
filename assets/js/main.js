@@ -4,6 +4,7 @@
   var header = document.getElementById('yr-header');
   var toggle = document.getElementById('yr-nav-toggle');
   var mobileNav = document.getElementById('yr-mobile-nav');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (header) {
     var onScroll = function () {
@@ -38,10 +39,6 @@
   if (hero) {
     var slides = hero.querySelectorAll('[data-hero-slide]');
     var dots = hero.querySelectorAll('[data-hero-dot]');
-    var eyebrow = hero.querySelector('[data-hero-eyebrow]');
-    var subtitles = Array.prototype.map.call(slides, function (_, i) {
-      return dots[i] ? dots[i].getAttribute('data-subtitle') || '' : '';
-    });
     var current = 0;
     var timer;
 
@@ -70,16 +67,18 @@
       dot.addEventListener('click', function () {
         goTo(parseInt(dot.getAttribute('data-hero-dot'), 10));
         clearInterval(timer);
-        timer = setInterval(function () {
-          goTo((current + 1) % slides.length);
-        }, 5000);
+        if (slides.length > 1 && !reduceMotion) {
+          timer = setInterval(function () {
+            goTo((current + 1) % slides.length);
+          }, 5600);
+        }
       });
     });
 
-    if (slides.length > 1) {
+    if (slides.length > 1 && !reduceMotion) {
       timer = setInterval(function () {
         goTo((current + 1) % slides.length);
-      }, 5000);
+      }, 5600);
     }
   }
 
@@ -100,4 +99,26 @@
     });
   }
 
+  var revealNodes = document.querySelectorAll('.yr-reveal');
+  if (revealNodes.length) {
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      revealNodes.forEach(function (node) {
+        node.classList.add('is-visible');
+      });
+    } else {
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          });
+        },
+        { threshold: 0.16, rootMargin: '0px 0px -8% 0px' }
+      );
+      revealNodes.forEach(function (node) {
+        observer.observe(node);
+      });
+    }
+  }
 })();

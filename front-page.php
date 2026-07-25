@@ -43,8 +43,11 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 
 <section class="yr-hero" data-hero>
 	<?php foreach ( $hero_slides as $i => $slide ) : ?>
+		<?php
+		$slide_subtitle = $slide['subtitle'] ?: sprintf( __( 'Welcome to %s', 'your-restaurant' ), $settings['site_name'] );
+		?>
 		<?php if ( 0 === $i ) : ?>
-			<div class="yr-hero__slide is-active" data-hero-slide>
+			<div class="yr-hero__slide is-active" data-hero-slide data-hero-subtitle="<?php echo esc_attr( $slide_subtitle ); ?>">
 				<img
 					class="yr-hero__image"
 					src="<?php echo esc_url( $slide['image'] ); ?>"
@@ -56,10 +59,11 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 				/>
 			</div>
 		<?php else : ?>
-			<div class="yr-hero__slide" data-hero-slide data-hero-src="<?php echo esc_url( $slide['image'] ); ?>"></div>
+			<div class="yr-hero__slide" data-hero-slide data-hero-src="<?php echo esc_url( $slide['image'] ); ?>" data-hero-subtitle="<?php echo esc_attr( $slide_subtitle ); ?>"></div>
 		<?php endif; ?>
 	<?php endforeach; ?>
-	<div class="yr-hero__overlay"></div>
+	<div class="yr-hero__overlay" aria-hidden="true"></div>
+	<div class="yr-hero__vignette" aria-hidden="true"></div>
 
 	<?php if ( count( $hero_slides ) > 1 ) : ?>
 		<div class="yr-hero__dots">
@@ -70,8 +74,8 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 	<?php endif; ?>
 
 	<div class="yr-hero__content">
-		<p class="yr-hero__eyebrow" data-hero-eyebrow><?php echo esc_html( $hero_slides[0]['subtitle'] ?: sprintf( __( 'Welcome to %s', 'your-restaurant' ), $settings['site_name'] ) ); ?></p>
-		<h1 class="yr-hero__title">
+		<p class="yr-hero__eyebrow yr-reveal" data-hero-eyebrow><?php echo esc_html( $hero_slides[0]['subtitle'] ?: sprintf( __( 'Welcome to %s', 'your-restaurant' ), $settings['site_name'] ) ); ?></p>
+		<h1 class="yr-hero__title yr-reveal yr-reveal--delay-1">
 			<?php echo esc_html( $hero_parts['before'] ); ?>
 			<?php if ( ! empty( $hero_parts['highlight'] ) ) : ?>
 				<br><em><?php echo esc_html( $hero_parts['highlight'] ); ?></em>
@@ -80,8 +84,8 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 				<br><?php echo esc_html( $hero_parts['after'] ); ?>
 			<?php endif; ?>
 		</h1>
-		<p class="yr-hero__subtitle"><?php echo esc_html( $settings['hero_subtitle'] ); ?></p>
-		<div class="yr-hero__actions">
+		<p class="yr-hero__subtitle yr-reveal yr-reveal--delay-2"><?php echo esc_html( $settings['hero_subtitle'] ); ?></p>
+		<div class="yr-hero__actions yr-reveal yr-reveal--delay-3">
 			<a href="<?php echo esc_url( $book_url ); ?>" class="yr-btn yr-btn--accent"><?php esc_html_e( 'Reserve a Table', 'your-restaurant' ); ?></a>
 			<a href="<?php echo esc_url( $menu_url ); ?>" class="yr-btn yr-btn--outline-light"><?php esc_html_e( 'Explore Menu', 'your-restaurant' ); ?> <?php echo yr_icon( 'arrow', 14 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 		</div>
@@ -91,8 +95,9 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 <section class="yr-stats">
 	<div class="yr-container yr-stats__grid">
 		<?php foreach ( $settings['stats'] as $i => $stat ) : ?>
-			<div class="yr-stat">
-				<span class="yr-stat__icon"><?php echo yr_icon( $stat_icons[ $i ] ?? 'award', 20 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></span>
+			<div class="yr-stat yr-reveal">
+				<span class="yr-stat__ornament" aria-hidden="true"></span>
+				<span class="yr-stat__icon"><?php echo yr_icon( $stat_icons[ $i ] ?? 'award', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></span>
 				<strong class="yr-stat__value"><?php echo esc_html( $stat['value'] ); ?></strong>
 				<span class="yr-stat__label"><?php echo esc_html( $stat['label'] ); ?></span>
 			</div>
@@ -100,16 +105,16 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 	</div>
 </section>
 
-<section class="yr-section">
+<section class="yr-section yr-section--story">
 	<div class="yr-container yr-grid-2">
-		<div class="yr-story-media">
+		<div class="yr-story-media yr-reveal">
 			<img src="<?php echo esc_url( $story_image ); ?>" alt="<?php echo esc_attr( $story['title'] ?? '' ); ?>" width="700" height="850" loading="lazy" decoding="async" />
 			<div class="yr-story-badge">
 				<strong><?php echo esc_html( $story['badge_value'] ?? '12' ); ?></strong>
 				<span><?php echo esc_html( implode( ' ', $badge_lines ) ); ?></span>
 			</div>
 		</div>
-		<div>
+		<div class="yr-reveal yr-reveal--delay-1">
 			<p class="yr-eyebrow"><?php echo esc_html( $story['eyebrow'] ?? __( 'Our Story', 'your-restaurant' ) ); ?></p>
 			<h2 class="yr-heading"><?php echo esc_html( $story['title'] ?? '' ); ?><br><em><?php echo esc_html( $story['title_highlight'] ?? '' ); ?></em></h2>
 			<p class="yr-text"><?php echo esc_html( $story['description'] ?? '' ); ?></p>
@@ -124,7 +129,7 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 <?php if ( $featured ) : ?>
 <section class="yr-section yr-section--dark">
 	<div class="yr-container">
-		<div class="yr-section__header yr-section__header--center">
+		<div class="yr-section__header yr-section__header--center yr-reveal">
 			<p class="yr-eyebrow"><?php esc_html_e( 'Culinary Highlights', 'your-restaurant' ); ?></p>
 			<h2 class="yr-heading yr-heading--light"><?php esc_html_e( 'Signature Creations', 'your-restaurant' ); ?></h2>
 		</div>
@@ -133,7 +138,7 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 				<?php get_template_part( 'template-parts/dish', 'card', array( 'item' => $item, 'menu_url' => $menu_url ) ); ?>
 			<?php endforeach; ?>
 		</div>
-		<div class="yr-text-center yr-mt-12">
+		<div class="yr-text-center yr-mt-12 yr-reveal">
 			<a href="<?php echo esc_url( $menu_url ); ?>" class="yr-btn yr-btn--outline-gold"><?php esc_html_e( 'View Full Menu', 'your-restaurant' ); ?></a>
 		</div>
 	</div>
@@ -141,7 +146,8 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 <?php endif; ?>
 
 <section class="yr-cta-band">
-	<div class="yr-cta-band__inner">
+	<div class="yr-cta-band__texture" aria-hidden="true"></div>
+	<div class="yr-cta-band__inner yr-reveal">
 		<p class="yr-eyebrow yr-eyebrow--light"><?php esc_html_e( '— Join Us Tonight —', 'your-restaurant' ); ?></p>
 		<h2 class="yr-heading yr-heading--light"><?php esc_html_e( 'Reserve Your Table', 'your-restaurant' ); ?></h2>
 		<p class="yr-text yr-text--light"><?php esc_html_e( "Whether it's an intimate dinner for two or a celebration with loved ones, we'll make it unforgettable.", 'your-restaurant' ); ?></p>
@@ -150,9 +156,9 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 </section>
 
 <?php if ( $testimonials ) : ?>
-<section class="yr-section">
+<section class="yr-section yr-section--testimonials">
 	<div class="yr-container">
-		<div class="yr-section__header yr-section__header--center">
+		<div class="yr-section__header yr-section__header--center yr-reveal">
 			<p class="yr-eyebrow"><?php esc_html_e( 'Guest Voices', 'your-restaurant' ); ?></p>
 			<h2 class="yr-heading"><?php esc_html_e( 'What Our Guests Say', 'your-restaurant' ); ?></h2>
 		</div>

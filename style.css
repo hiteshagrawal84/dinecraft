@@ -2,8 +2,8 @@
 Theme Name: Your Restaurant
 Author: CreatesWowtech
 Author URI: https://www.createswowtech.com
-Description: A flexible fine dining restaurant theme with elegant page templates, menu presentation, testimonials, reservations, and a blog.
-Version: 1.1.0
+Description: A flexible fine dining restaurant theme with elegant page templates, menu presentation, testimonials, reservations, and a blog. Maison Noir luxury visual redesign.
+Version: 1.1.1
 Requires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 7.4
@@ -52,7 +52,7 @@ Your Restaurant is distributed under the terms of the GNU GPL v2 or later.
 	margin-top: 0.5rem;
 	font-size: 0.85rem;
 	line-height: 1.5;
-	color: #7a6855;
+	color: #6b635a;
 	text-align: center;
 }
 
@@ -61,7 +61,7 @@ Your Restaurant is distributed under the terms of the GNU GPL v2 or later.
 }
 
 .bypostauthor > .yr-comment {
-	border-color: rgba(201, 136, 42, 0.45);
+	border-color: rgba(196, 163, 90, 0.45);
 }
 
 .screen-reader-text {
@@ -82,12 +82,12 @@ Your Restaurant is distributed under the terms of the GNU GPL v2 or later.
 }
 
 .screen-reader-text:focus {
-	background-color: #faf6f0;
+	background-color: #f3f0ea;
 	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(26, 18, 8, 0.2);
+	box-shadow: 0 0 2px 2px rgba(12, 11, 10, 0.22);
 	clip: auto !important;
 	clip-path: none;
-	color: #1a1208;
+	color: #12100e;
 	display: block;
 	font-size: 0.875rem;
 	font-weight: 700;

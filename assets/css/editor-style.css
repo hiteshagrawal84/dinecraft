@@ -1,19 +1,21 @@
 /**
- * Editor styles — mirror front-end content styling.
+ * Editor styles — mirror front-end Maison Noir content styling.
  */
 
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap");
+
 body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	font-family: "Outfit", "Segoe UI", Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	line-height: 1.7;
-	color: #1a1208;
-	background: #faf6f0;
+	color: #12100e;
+	background: #f3f0ea;
 }
 
 .editor-styles-wrapper {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-	color: #1a1208;
-	background: #faf6f0;
+	font-family: "Outfit", "Segoe UI", Helvetica, Arial, sans-serif;
+	color: #12100e;
+	background: #f3f0ea;
 }
 
 .editor-styles-wrapper h1,
@@ -21,33 +23,33 @@ body {
 .editor-styles-wrapper h3,
 .editor-styles-wrapper h4,
 .editor-post-title__input {
-	font-family: Georgia, "Times New Roman", serif;
-	font-weight: 700;
-	color: #1a1208;
+	font-family: "Cormorant Garamond", "Times New Roman", Georgia, serif;
+	font-weight: 500;
+	color: #12100e;
 }
 
 .editor-styles-wrapper a {
-	color: #6b1e2a;
+	color: #2a1519;
 }
 
 .editor-styles-wrapper .wp-block-quote {
-	border-left: 3px solid #c9882a;
+	border-left: 2px solid #c4a35a;
 	padding-left: 1.25rem;
-	font-family: Georgia, "Times New Roman", serif;
+	font-family: "Cormorant Garamond", "Times New Roman", Georgia, serif;
 	font-style: italic;
 }
 
 .editor-styles-wrapper .is-style-yr-card,
 .editor-styles-wrapper .wp-block-group.is-style-yr-card {
-	background: #fffbf5;
-	border: 1px solid rgba(107, 30, 42, 0.12);
+	background: #faf8f4;
+	border: 1px solid rgba(42, 21, 25, 0.1);
 	padding: 1.5rem;
 }
 
 .editor-styles-wrapper .is-style-yr-testimonial,
 .editor-styles-wrapper .wp-block-quote.is-style-yr-testimonial {
-	border-top: 3px solid #c9882a;
+	border-top: 2px solid #c4a35a;
 	border-left: 0;
-	background: #fffbf5;
+	background: #faf8f4;
 	padding: 1.5rem;
 }

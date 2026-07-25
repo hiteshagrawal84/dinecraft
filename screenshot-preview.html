@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Restaurant — Homepage Preview</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <title>Your Restaurant — Maison Noir Preview</title>
   <link rel="stylesheet" href="assets/css/main.css" />
   <style>
     /* Preview-only: full page capture helpers */
@@ -12,6 +11,7 @@
     .yr-nav { display: flex !important; }
     .yr-header__cta--desktop { display: inline-flex !important; }
     .yr-nav__toggle { display: none !important; }
+    .yr-reveal { opacity: 1; transform: none; }
   </style>
 </head>
 <body>
@@ -50,6 +50,8 @@
     <button type="button" class="yr-hero__dot"></button>
   </div>
   <div class="yr-hero__content">
+    <p class="yr-hero__brand">Your Restaurant</p>
+    <div class="yr-ornament" aria-hidden="true"><span class="yr-ornament__diamond"></span></div>
     <p class="yr-hero__eyebrow">Welcome to Your Restaurant</p>
     <h1 class="yr-hero__title">Where Every Meal<br><em>Becomes a Memory</em></h1>
     <p class="yr-hero__subtitle">An intimate fine dining experience where seasonal ingredients, expert technique, and warm hospitality converge.</p>
@@ -88,6 +90,7 @@
   <div class="yr-container">
     <div class="yr-section__header yr-section__header--center">
       <p class="yr-eyebrow">Culinary Highlights</p>
+      <div class="yr-ornament" aria-hidden="true"><span class="yr-ornament__diamond"></span></div>
       <h2 class="yr-heading yr-heading--light">Signature Creations</h2>
     </div>
     <div class="yr-grid-3">

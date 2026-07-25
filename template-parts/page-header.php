@@ -14,6 +14,7 @@ $subtitle = $args['subtitle'] ?? '';
 		<?php if ( $eyebrow ) : ?>
 			<p class="yr-eyebrow"><?php echo esc_html( $eyebrow ); ?></p>
 		<?php endif; ?>
+		<div class="yr-ornament" aria-hidden="true"><span class="yr-ornament__diamond"></span></div>
 		<h1 class="yr-page-header__title"><?php echo esc_html( $title ); ?></h1>
 		<?php if ( $subtitle ) : ?>
 			<p class="yr-page-header__subtitle"><?php echo esc_html( $subtitle ); ?></p>

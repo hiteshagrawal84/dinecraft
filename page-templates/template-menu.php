@@ -49,6 +49,7 @@ get_template_part( 'template-parts/page', 'header', array(
 <section class="yr-tasting-band">
 	<div class="yr-tasting-band__inner yr-container">
 		<p class="yr-eyebrow"><?php esc_html_e( 'A Curated Journey', 'your-restaurant' ); ?></p>
+		<div class="yr-ornament" aria-hidden="true"><span class="yr-ornament__diamond"></span></div>
 		<h2 class="yr-heading yr-heading--light"><?php esc_html_e( "Chef's Tasting Menu", 'your-restaurant' ); ?></h2>
 		<p class="yr-text yr-text--light"><?php esc_html_e( "A six-course journey through the season's finest, personally curated by Chef Mathieu Laurent.", 'your-restaurant' ); ?></p>
 		<p class="yr-tasting-band__price"><?php esc_html_e( '₹ 3,950 per person', 'your-restaurant' ); ?></p>

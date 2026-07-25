@@ -8,11 +8,25 @@
   <style>
     /* Preview-only: full page capture helpers */
     body { margin: 0; }
-    .yr-nav { display: flex !important; }
-    .yr-header__cta--desktop { display: inline-flex !important; }
-    .yr-nav__toggle { display: none !important; }
-    .yr-reveal { opacity: 1; transform: none; }
+    .yr-reveal,
+    .yr-hero__brand,
+    .yr-hero__eyebrow,
+    .yr-hero__title,
+    .yr-hero__subtitle,
+    .yr-hero__actions {
+      opacity: 1 !important;
+      transform: none !important;
+      animation: none !important;
+    }
   </style>
+  <script>
+    /* Force desktop chrome for wide captures; leave native responsive CSS for narrow. */
+    if (window.innerWidth >= 1024) {
+      var s = document.createElement('style');
+      s.textContent = '.yr-nav{display:flex!important}.yr-header__cta--desktop{display:inline-flex!important}.yr-nav__toggle{display:none!important}';
+      document.head.appendChild(s);
+    }
+  </script>
 </head>
 <body>
 <header class="yr-header is-scrolled" id="yr-header">

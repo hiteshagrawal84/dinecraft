@@ -2,16 +2,16 @@
 /**
  * Template Name: Blog
  *
- * @package YourRestaurant
+ * @package DineCraft
  */
 
 get_header();
 ?>
 <?php
 get_template_part( 'template-parts/page', 'header', array(
-	'eyebrow'  => __( 'Journal', 'your-restaurant' ),
-	'title'    => __( 'Our Blog', 'your-restaurant' ),
-	'subtitle' => __( 'Stories from the kitchen and beyond', 'your-restaurant' ),
+	'eyebrow'  => __( 'Journal', 'dinecraft' ),
+	'title'    => __( 'Our Blog', 'dinecraft' ),
+	'subtitle' => __( 'Stories from the kitchen and beyond', 'dinecraft' ),
 ) );
 ?>
 
@@ -35,7 +35,7 @@ get_template_part( 'template-parts/page', 'header', array(
 			wp_reset_postdata();
 		else :
 			?>
-			<p class="yr-empty"><?php esc_html_e( 'No blog posts yet.', 'your-restaurant' ); ?></p>
+			<p class="yr-empty"><?php esc_html_e( 'No blog posts yet.', 'dinecraft' ); ?></p>
 		<?php endif; ?>
 	</div>
 </section>

@@ -2,7 +2,7 @@
 /**
  * Theme Customizer settings.
  *
- * @package YourRestaurant
+ * @package DineCraft
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -18,24 +18,24 @@ function yr_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'yr_restaurant_options',
 		array(
-			'title'       => __( 'Restaurant Options', 'your-restaurant' ),
-			'description' => __( 'Customize the restaurant identity and contact details.', 'your-restaurant' ),
+			'title'       => __( 'Restaurant Options', 'dinecraft' ),
+			'description' => __( 'Customize the restaurant identity and contact details.', 'dinecraft' ),
 			'priority'    => 35,
 		)
 	);
 
 	$fields = array(
-		'site_name'          => array( __( 'Restaurant Name', 'your-restaurant' ), 'text', 'sanitize_text_field' ),
-		'site_tagline'       => array( __( 'Restaurant Tagline', 'your-restaurant' ), 'text', 'sanitize_text_field' ),
-		'hero_title'         => array( __( 'Hero Title', 'your-restaurant' ), 'text', 'sanitize_text_field' ),
-		'hero_subtitle'      => array( __( 'Hero Subtitle', 'your-restaurant' ), 'textarea', 'sanitize_textarea_field' ),
-		'footer_description' => array( __( 'Footer Description', 'your-restaurant' ), 'textarea', 'sanitize_textarea_field' ),
-		'footer_address'     => array( __( 'Address', 'your-restaurant' ), 'textarea', 'sanitize_textarea_field' ),
-		'footer_phone'       => array( __( 'Phone', 'your-restaurant' ), 'text', 'sanitize_text_field' ),
-		'footer_email'       => array( __( 'Email', 'your-restaurant' ), 'email', 'sanitize_email' ),
-		'footer_copyright'   => array( __( 'Copyright Text', 'your-restaurant' ), 'text', 'sanitize_text_field' ),
-		'map_latitude'       => array( __( 'Map Latitude', 'your-restaurant' ), 'text', 'sanitize_text_field' ),
-		'map_longitude'      => array( __( 'Map Longitude', 'your-restaurant' ), 'text', 'sanitize_text_field' ),
+		'site_name'          => array( __( 'Restaurant Name', 'dinecraft' ), 'text', 'sanitize_text_field' ),
+		'site_tagline'       => array( __( 'Restaurant Tagline', 'dinecraft' ), 'text', 'sanitize_text_field' ),
+		'hero_title'         => array( __( 'Hero Title', 'dinecraft' ), 'text', 'sanitize_text_field' ),
+		'hero_subtitle'      => array( __( 'Hero Subtitle', 'dinecraft' ), 'textarea', 'sanitize_textarea_field' ),
+		'footer_description' => array( __( 'Footer Description', 'dinecraft' ), 'textarea', 'sanitize_textarea_field' ),
+		'footer_address'     => array( __( 'Address', 'dinecraft' ), 'textarea', 'sanitize_textarea_field' ),
+		'footer_phone'       => array( __( 'Phone', 'dinecraft' ), 'text', 'sanitize_text_field' ),
+		'footer_email'       => array( __( 'Email', 'dinecraft' ), 'email', 'sanitize_email' ),
+		'footer_copyright'   => array( __( 'Copyright Text', 'dinecraft' ), 'text', 'sanitize_text_field' ),
+		'map_latitude'       => array( __( 'Map Latitude', 'dinecraft' ), 'text', 'sanitize_text_field' ),
+		'map_longitude'      => array( __( 'Map Longitude', 'dinecraft' ), 'text', 'sanitize_text_field' ),
 	);
 
 	foreach ( $fields as $key => $field ) {
@@ -58,10 +58,10 @@ function yr_customize_register( $wp_customize ) {
 	}
 
 	$url_fields = array(
-		'footer_credit_url' => __( 'Footer Credit URL', 'your-restaurant' ),
-		'instagram'         => __( 'Instagram URL', 'your-restaurant' ),
-		'facebook'          => __( 'Facebook URL', 'your-restaurant' ),
-		'twitter'           => __( 'X / Twitter URL', 'your-restaurant' ),
+		'footer_credit_url' => __( 'Footer Credit URL', 'dinecraft' ),
+		'instagram'         => __( 'Instagram URL', 'dinecraft' ),
+		'facebook'          => __( 'Facebook URL', 'dinecraft' ),
+		'twitter'           => __( 'X / Twitter URL', 'dinecraft' ),
 	);
 
 	foreach ( $url_fields as $key => $label ) {

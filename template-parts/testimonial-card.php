@@ -2,7 +2,7 @@
 /**
  * Testimonial card.
  *
- * @package YourRestaurant
+ * @package DineCraft
  */
 
 $testimonial = $args['testimonial'] ?? null;

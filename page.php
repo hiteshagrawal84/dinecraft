@@ -2,7 +2,7 @@
 /**
  * Page template.
  *
- * @package YourRestaurant
+ * @package DineCraft
  */
 
 get_header();
@@ -15,7 +15,7 @@ get_header();
 			the_content();
 			wp_link_pages(
 				array(
-					'before' => '<nav class="yr-page-links"><span class="yr-page-links__label">' . esc_html__( 'Pages:', 'your-restaurant' ) . '</span> ',
+					'before' => '<nav class="yr-page-links"><span class="yr-page-links__label">' . esc_html__( 'Pages:', 'dinecraft' ) . '</span> ',
 					'after'  => '</nav>',
 				)
 			);

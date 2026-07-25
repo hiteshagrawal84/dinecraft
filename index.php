@@ -2,7 +2,7 @@
 /**
  * Default index template.
  *
- * @package YourRestaurant
+ * @package DineCraft
  */
 
 get_header();
@@ -18,7 +18,7 @@ get_header();
 			<?php endwhile; ?>
 			<div class="yr-pagination"><?php the_posts_pagination(); ?></div>
 		<?php else : ?>
-			<p><?php esc_html_e( 'No content found.', 'your-restaurant' ); ?></p>
+			<p><?php esc_html_e( 'No content found.', 'dinecraft' ); ?></p>
 		<?php endif; ?>
 		<?php get_sidebar(); ?>
 	</div>

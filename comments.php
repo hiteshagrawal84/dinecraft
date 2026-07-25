@@ -2,7 +2,7 @@
 /**
  * Comments template.
  *
- * @package YourRestaurant
+ * @package DineCraft
  */
 
 if ( post_password_required() ) {
@@ -17,7 +17,7 @@ if ( post_password_required() ) {
 			$yr_comment_count = get_comments_number();
 			printf(
 				/* translators: 1: comment count number */
-				esc_html( _n( '%1$s Comment', '%1$s Comments', $yr_comment_count, 'your-restaurant' ) ),
+				esc_html( _n( '%1$s Comment', '%1$s Comments', $yr_comment_count, 'dinecraft' ) ),
 				esc_html( number_format_i18n( $yr_comment_count ) )
 			);
 			?>
@@ -39,24 +39,24 @@ if ( post_password_required() ) {
 		<?php
 		the_comments_navigation(
 			array(
-				'prev_text' => esc_html__( 'Older comments', 'your-restaurant' ),
-				'next_text' => esc_html__( 'Newer comments', 'your-restaurant' ),
+				'prev_text' => esc_html__( 'Older comments', 'dinecraft' ),
+				'next_text' => esc_html__( 'Newer comments', 'dinecraft' ),
 			)
 		);
 
 		if ( ! comments_open() ) :
 			?>
-			<p class="yr-comments__closed"><?php esc_html_e( 'Comments are closed.', 'your-restaurant' ); ?></p>
+			<p class="yr-comments__closed"><?php esc_html_e( 'Comments are closed.', 'dinecraft' ); ?></p>
 			<?php
 		endif;
 	endif;
 
 	comment_form(
 		array(
-			'title_reply'          => esc_html__( 'Leave a Comment', 'your-restaurant' ),
-			'title_reply_to'       => esc_html__( 'Leave a Reply to %s', 'your-restaurant' ),
-			'cancel_reply_link'    => esc_html__( 'Cancel reply', 'your-restaurant' ),
-			'label_submit'         => esc_html__( 'Post Comment', 'your-restaurant' ),
+			'title_reply'          => esc_html__( 'Leave a Comment', 'dinecraft' ),
+			'title_reply_to'       => esc_html__( 'Leave a Reply to %s', 'dinecraft' ),
+			'cancel_reply_link'    => esc_html__( 'Cancel reply', 'dinecraft' ),
+			'label_submit'         => esc_html__( 'Post Comment', 'dinecraft' ),
 			'comment_notes_before' => '',
 			'class_submit'         => 'yr-btn yr-btn--primary',
 		)

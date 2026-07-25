@@ -4,12 +4,12 @@
 $settings     = yr_get_settings();
 $social_labels = array( 'instagram' => 'IG', 'facebook' => 'FB', 'twitter' => 'X' );
 $footer_links = array(
-	array( home_url( '/' ), __( 'Home', 'your-restaurant' ) ),
-	array( yr_page_url( 'page-templates/template-menu.php' ), __( 'Our Menu', 'your-restaurant' ) ),
-	array( yr_page_url( 'page-templates/template-book.php' ), __( 'Book a Table', 'your-restaurant' ) ),
-	array( yr_page_url( 'page-templates/template-about.php' ), __( 'About Us', 'your-restaurant' ) ),
-	array( get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog' ), __( 'Blog', 'your-restaurant' ) ),
-	array( yr_page_url( 'page-templates/template-contact.php' ), __( 'Contact', 'your-restaurant' ) ),
+	array( home_url( '/' ), __( 'Home', 'dinecraft' ) ),
+	array( yr_page_url( 'page-templates/template-menu.php' ), __( 'Our Menu', 'dinecraft' ) ),
+	array( yr_page_url( 'page-templates/template-book.php' ), __( 'Book a Table', 'dinecraft' ) ),
+	array( yr_page_url( 'page-templates/template-about.php' ), __( 'About Us', 'dinecraft' ) ),
+	array( get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog' ), __( 'Blog', 'dinecraft' ) ),
+	array( yr_page_url( 'page-templates/template-contact.php' ), __( 'Contact', 'dinecraft' ) ),
 );
 $phones = ! empty( $settings['contact_phones'] ) ? $settings['contact_phones'] : array( $settings['footer_phone'] );
 $emails = ! empty( $settings['contact_emails'] ) ? $settings['contact_emails'] : array( $settings['footer_email'] );
@@ -38,7 +38,7 @@ $emails = ! empty( $settings['contact_emails'] ) ? $settings['contact_emails'] :
 		</div>
 
 		<div>
-			<h4><?php esc_html_e( 'Navigation', 'your-restaurant' ); ?></h4>
+			<h4><?php esc_html_e( 'Navigation', 'dinecraft' ); ?></h4>
 			<ul class="yr-footer__links">
 				<?php foreach ( $footer_links as $link ) : ?>
 					<li><a href="<?php echo esc_url( $link[0] ); ?>"><?php echo esc_html( $link[1] ); ?></a></li>
@@ -47,7 +47,7 @@ $emails = ! empty( $settings['contact_emails'] ) ? $settings['contact_emails'] :
 		</div>
 
 		<div>
-			<h4><?php esc_html_e( 'Hours', 'your-restaurant' ); ?></h4>
+			<h4><?php esc_html_e( 'Hours', 'dinecraft' ); ?></h4>
 			<ul class="yr-footer__hours">
 				<?php foreach ( $settings['footer_hours'] as $hour ) : ?>
 					<li>
@@ -59,7 +59,7 @@ $emails = ! empty( $settings['contact_emails'] ) ? $settings['contact_emails'] :
 		</div>
 
 		<div>
-			<h4><?php esc_html_e( 'Contact', 'your-restaurant' ); ?></h4>
+			<h4><?php esc_html_e( 'Contact', 'dinecraft' ); ?></h4>
 			<ul class="yr-footer__contact">
 				<li>
 					<?php echo yr_icon( 'map-pin', 15 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
@@ -79,7 +79,7 @@ $emails = ! empty( $settings['contact_emails'] ) ? $settings['contact_emails'] :
 				<?php endforeach; ?>
 				<li>
 					<?php echo yr_icon( 'clock', 15 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-					<span><?php esc_html_e( 'Open 7 days a week', 'your-restaurant' ); ?></span>
+					<span><?php esc_html_e( 'Open 7 days a week', 'dinecraft' ); ?></span>
 				</li>
 			</ul>
 		</div>

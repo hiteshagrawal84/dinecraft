@@ -2,7 +2,7 @@
 /**
  * Featured dish card (home dark section).
  *
- * @package YourRestaurant
+ * @package DineCraft
  */
 
 $item     = $args['item'] ?? null;

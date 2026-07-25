@@ -2,7 +2,7 @@
 /**
  * Front page — matches HomeContent.tsx
  *
- * @package YourRestaurant
+ * @package DineCraft
  */
 
 get_header();
@@ -29,7 +29,7 @@ if ( $banners ) {
 } else {
 	$hero_slides[] = array(
 		'image'    => yr_placeholder( 'hero-1' ),
-		'subtitle' => sprintf( __( 'Welcome to %s', 'your-restaurant' ), $settings['site_name'] ),
+		'subtitle' => sprintf( __( 'Welcome to %s', 'dinecraft' ), $settings['site_name'] ),
 	);
 }
 
@@ -64,13 +64,13 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 	<?php if ( count( $hero_slides ) > 1 ) : ?>
 		<div class="yr-hero__dots">
 			<?php foreach ( $hero_slides as $i => $slide ) : ?>
-				<button type="button" class="yr-hero__dot<?php echo 0 === $i ? ' is-active' : ''; ?>" data-hero-dot="<?php echo esc_attr( (string) $i ); ?>" aria-label="<?php echo esc_attr( sprintf( __( 'Slide %d', 'your-restaurant' ), $i + 1 ) ); ?>"></button>
+				<button type="button" class="yr-hero__dot<?php echo 0 === $i ? ' is-active' : ''; ?>" data-hero-dot="<?php echo esc_attr( (string) $i ); ?>" aria-label="<?php echo esc_attr( sprintf( __( 'Slide %d', 'dinecraft' ), $i + 1 ) ); ?>"></button>
 			<?php endforeach; ?>
 		</div>
 	<?php endif; ?>
 
 	<div class="yr-hero__content">
-		<p class="yr-hero__eyebrow" data-hero-eyebrow><?php echo esc_html( $hero_slides[0]['subtitle'] ?: sprintf( __( 'Welcome to %s', 'your-restaurant' ), $settings['site_name'] ) ); ?></p>
+		<p class="yr-hero__eyebrow" data-hero-eyebrow><?php echo esc_html( $hero_slides[0]['subtitle'] ?: sprintf( __( 'Welcome to %s', 'dinecraft' ), $settings['site_name'] ) ); ?></p>
 		<h1 class="yr-hero__title">
 			<?php echo esc_html( $hero_parts['before'] ); ?>
 			<?php if ( ! empty( $hero_parts['highlight'] ) ) : ?>
@@ -82,8 +82,8 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 		</h1>
 		<p class="yr-hero__subtitle"><?php echo esc_html( $settings['hero_subtitle'] ); ?></p>
 		<div class="yr-hero__actions">
-			<a href="<?php echo esc_url( $book_url ); ?>" class="yr-btn yr-btn--accent"><?php esc_html_e( 'Reserve a Table', 'your-restaurant' ); ?></a>
-			<a href="<?php echo esc_url( $menu_url ); ?>" class="yr-btn yr-btn--outline-light"><?php esc_html_e( 'Explore Menu', 'your-restaurant' ); ?> <?php echo yr_icon( 'arrow', 14 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+			<a href="<?php echo esc_url( $book_url ); ?>" class="yr-btn yr-btn--accent"><?php esc_html_e( 'Reserve a Table', 'dinecraft' ); ?></a>
+			<a href="<?php echo esc_url( $menu_url ); ?>" class="yr-btn yr-btn--outline-light"><?php esc_html_e( 'Explore Menu', 'dinecraft' ); ?> <?php echo yr_icon( 'arrow', 14 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 		</div>
 	</div>
 </section>
@@ -110,11 +110,11 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 			</div>
 		</div>
 		<div>
-			<p class="yr-eyebrow"><?php echo esc_html( $story['eyebrow'] ?? __( 'Our Story', 'your-restaurant' ) ); ?></p>
+			<p class="yr-eyebrow"><?php echo esc_html( $story['eyebrow'] ?? __( 'Our Story', 'dinecraft' ) ); ?></p>
 			<h2 class="yr-heading"><?php echo esc_html( $story['title'] ?? '' ); ?><br><em><?php echo esc_html( $story['title_highlight'] ?? '' ); ?></em></h2>
 			<p class="yr-text"><?php echo esc_html( $story['description'] ?? '' ); ?></p>
 			<a href="<?php echo esc_url( $story_url ); ?>" class="yr-link-cta">
-				<?php echo esc_html( $story['cta_text'] ?? __( 'Discover Our Story', 'your-restaurant' ) ); ?>
+				<?php echo esc_html( $story['cta_text'] ?? __( 'Discover Our Story', 'dinecraft' ) ); ?>
 				<span class="yr-link-cta__icon"><?php echo yr_icon( 'arrow', 14 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></span>
 			</a>
 		</div>
@@ -125,8 +125,8 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 <section class="yr-section yr-section--dark">
 	<div class="yr-container">
 		<div class="yr-section__header yr-section__header--center">
-			<p class="yr-eyebrow"><?php esc_html_e( 'Culinary Highlights', 'your-restaurant' ); ?></p>
-			<h2 class="yr-heading yr-heading--light"><?php esc_html_e( 'Signature Creations', 'your-restaurant' ); ?></h2>
+			<p class="yr-eyebrow"><?php esc_html_e( 'Culinary Highlights', 'dinecraft' ); ?></p>
+			<h2 class="yr-heading yr-heading--light"><?php esc_html_e( 'Signature Creations', 'dinecraft' ); ?></h2>
 		</div>
 		<div class="yr-grid-3">
 			<?php foreach ( $featured as $item ) : ?>
@@ -134,7 +134,7 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 			<?php endforeach; ?>
 		</div>
 		<div class="yr-text-center yr-mt-12">
-			<a href="<?php echo esc_url( $menu_url ); ?>" class="yr-btn yr-btn--outline-gold"><?php esc_html_e( 'View Full Menu', 'your-restaurant' ); ?></a>
+			<a href="<?php echo esc_url( $menu_url ); ?>" class="yr-btn yr-btn--outline-gold"><?php esc_html_e( 'View Full Menu', 'dinecraft' ); ?></a>
 		</div>
 	</div>
 </section>
@@ -142,10 +142,10 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 
 <section class="yr-cta-band">
 	<div class="yr-cta-band__inner">
-		<p class="yr-eyebrow yr-eyebrow--light"><?php esc_html_e( '— Join Us Tonight —', 'your-restaurant' ); ?></p>
-		<h2 class="yr-heading yr-heading--light"><?php esc_html_e( 'Reserve Your Table', 'your-restaurant' ); ?></h2>
-		<p class="yr-text yr-text--light"><?php esc_html_e( "Whether it's an intimate dinner for two or a celebration with loved ones, we'll make it unforgettable.", 'your-restaurant' ); ?></p>
-		<a href="<?php echo esc_url( $book_url ); ?>" class="yr-btn yr-btn--accent"><?php esc_html_e( 'Make a Reservation', 'your-restaurant' ); ?></a>
+		<p class="yr-eyebrow yr-eyebrow--light"><?php esc_html_e( '— Join Us Tonight —', 'dinecraft' ); ?></p>
+		<h2 class="yr-heading yr-heading--light"><?php esc_html_e( 'Reserve Your Table', 'dinecraft' ); ?></h2>
+		<p class="yr-text yr-text--light"><?php esc_html_e( "Whether it's an intimate dinner for two or a celebration with loved ones, we'll make it unforgettable.", 'dinecraft' ); ?></p>
+		<a href="<?php echo esc_url( $book_url ); ?>" class="yr-btn yr-btn--accent"><?php esc_html_e( 'Make a Reservation', 'dinecraft' ); ?></a>
 	</div>
 </section>
 
@@ -153,8 +153,8 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 <section class="yr-section">
 	<div class="yr-container">
 		<div class="yr-section__header yr-section__header--center">
-			<p class="yr-eyebrow"><?php esc_html_e( 'Guest Voices', 'your-restaurant' ); ?></p>
-			<h2 class="yr-heading"><?php esc_html_e( 'What Our Guests Say', 'your-restaurant' ); ?></h2>
+			<p class="yr-eyebrow"><?php esc_html_e( 'Guest Voices', 'dinecraft' ); ?></p>
+			<h2 class="yr-heading"><?php esc_html_e( 'What Our Guests Say', 'dinecraft' ); ?></h2>
 		</div>
 		<div class="yr-grid-3">
 			<?php foreach ( $testimonials as $testimonial ) : ?>

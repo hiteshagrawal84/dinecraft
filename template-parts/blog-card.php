@@ -2,7 +2,7 @@
 /**
  * Blog card.
  *
- * @package YourRestaurant
+ * @package DineCraft
  */
 
 $image = get_the_post_thumbnail_url( get_the_ID(), 'large' );

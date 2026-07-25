@@ -2,7 +2,7 @@
 /**
  * Page header.
  *
- * @package YourRestaurant
+ * @package DineCraft
  */
 
 $eyebrow  = $args['eyebrow'] ?? '';

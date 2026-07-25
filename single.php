@@ -2,7 +2,7 @@
 /**
  * Single post template.
  *
- * @package YourRestaurant
+ * @package DineCraft
  */
 
 get_header();
@@ -40,7 +40,7 @@ $blog_url = get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog'
 			the_content();
 			wp_link_pages(
 				array(
-					'before' => '<nav class="yr-page-links"><span class="yr-page-links__label">' . esc_html__( 'Pages:', 'your-restaurant' ) . '</span> ',
+					'before' => '<nav class="yr-page-links"><span class="yr-page-links__label">' . esc_html__( 'Pages:', 'dinecraft' ) . '</span> ',
 					'after'  => '</nav>',
 				)
 			);
@@ -49,12 +49,12 @@ $blog_url = get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog'
 
 		<?php if ( has_tag() ) : ?>
 			<footer class="yr-post-tags">
-				<span class="yr-post-tags__label"><?php esc_html_e( 'Tags:', 'your-restaurant' ); ?></span>
+				<span class="yr-post-tags__label"><?php esc_html_e( 'Tags:', 'dinecraft' ); ?></span>
 				<?php the_tags( '', ', ', '' ); ?>
 			</footer>
 		<?php endif; ?>
 
-		<p class="yr-back-link"><a href="<?php echo esc_url( $blog_url ); ?>">← <?php esc_html_e( 'Back to Blog', 'your-restaurant' ); ?></a></p>
+		<p class="yr-back-link"><a href="<?php echo esc_url( $blog_url ); ?>">← <?php esc_html_e( 'Back to Blog', 'dinecraft' ); ?></a></p>
 
 		<?php
 		if ( comments_open() || get_comments_number() ) {

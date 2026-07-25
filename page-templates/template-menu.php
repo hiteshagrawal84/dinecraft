@@ -2,7 +2,7 @@
 /**
  * Template Name: Menu
  *
- * @package YourRestaurant
+ * @package DineCraft
  */
 
 get_header();
@@ -13,14 +13,14 @@ $items      = yr_get_menu_items();
 <?php
 get_template_part( 'template-parts/page', 'header', array(
 	'eyebrow'  => yr_setting( 'site_name' ),
-	'title'    => __( 'Our Menu', 'your-restaurant' ),
-	'subtitle' => __( 'Crafted from the finest seasonal ingredients', 'your-restaurant' ),
+	'title'    => __( 'Our Menu', 'dinecraft' ),
+	'subtitle' => __( 'Crafted from the finest seasonal ingredients', 'dinecraft' ),
 ) );
 ?>
 
 <div class="yr-menu-filters" id="yr-menu-filters">
 	<div class="yr-container yr-menu-filters__inner">
-		<button type="button" class="yr-filter-pill is-active" data-filter="all"><?php esc_html_e( 'All', 'your-restaurant' ); ?></button>
+		<button type="button" class="yr-filter-pill is-active" data-filter="all"><?php esc_html_e( 'All', 'dinecraft' ); ?></button>
 		<?php foreach ( $categories as $cat ) : ?>
 			<button type="button" class="yr-filter-pill" data-filter="<?php echo esc_attr( $cat->slug ); ?>"><?php echo esc_html( $cat->name ); ?></button>
 		<?php endforeach; ?>
@@ -41,17 +41,17 @@ get_template_part( 'template-parts/page', 'header', array(
 			<?php endforeach; ?>
 		</div>
 		<?php if ( empty( $items ) ) : ?>
-			<p class="yr-empty"><?php esc_html_e( 'Add menu content to display your restaurant offerings here.', 'your-restaurant' ); ?></p>
+			<p class="yr-empty"><?php esc_html_e( 'Add menu content to display your restaurant offerings here.', 'dinecraft' ); ?></p>
 		<?php endif; ?>
 	</div>
 </section>
 
 <section class="yr-tasting-band">
 	<div class="yr-tasting-band__inner yr-container">
-		<p class="yr-eyebrow"><?php esc_html_e( 'A Curated Journey', 'your-restaurant' ); ?></p>
-		<h2 class="yr-heading yr-heading--light"><?php esc_html_e( "Chef's Tasting Menu", 'your-restaurant' ); ?></h2>
-		<p class="yr-text yr-text--light"><?php esc_html_e( "A six-course journey through the season's finest, personally curated by Chef Mathieu Laurent.", 'your-restaurant' ); ?></p>
-		<p class="yr-tasting-band__price"><?php esc_html_e( '₹ 3,950 per person', 'your-restaurant' ); ?></p>
+		<p class="yr-eyebrow"><?php esc_html_e( 'A Curated Journey', 'dinecraft' ); ?></p>
+		<h2 class="yr-heading yr-heading--light"><?php esc_html_e( "Chef's Tasting Menu", 'dinecraft' ); ?></h2>
+		<p class="yr-text yr-text--light"><?php esc_html_e( "A six-course journey through the season's finest, personally curated by Chef Mathieu Laurent.", 'dinecraft' ); ?></p>
+		<p class="yr-tasting-band__price"><?php esc_html_e( '₹ 3,950 per person', 'dinecraft' ); ?></p>
 	</div>
 </section>
 

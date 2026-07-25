@@ -2,7 +2,7 @@
 /**
  * Search results template.
  *
- * @package YourRestaurant
+ * @package DineCraft
  */
 
 get_header();
@@ -14,7 +14,7 @@ get_header();
 			<?php
 			printf(
 				/* translators: %s: search query. */
-				esc_html__( 'Search results for: %s', 'your-restaurant' ),
+				esc_html__( 'Search results for: %s', 'dinecraft' ),
 				'<em>' . esc_html( get_search_query() ) . '</em>'
 			);
 			?>
@@ -35,7 +35,7 @@ get_header();
 			</div>
 			<div class="yr-pagination"><?php the_posts_pagination(); ?></div>
 		<?php else : ?>
-			<p class="yr-empty"><?php esc_html_e( 'No results found. Please try a different search.', 'your-restaurant' ); ?></p>
+			<p class="yr-empty"><?php esc_html_e( 'No results found. Please try a different search.', 'dinecraft' ); ?></p>
 		<?php endif; ?>
 
 		<?php get_sidebar(); ?>

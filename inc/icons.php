@@ -2,7 +2,7 @@
 /**
  * Inline SVG icons matching Lucide icons used in React.
  *
- * @package YourRestaurant
+ * @package DineCraft
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

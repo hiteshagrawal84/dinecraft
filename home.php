@@ -2,16 +2,16 @@
 /**
  * Blog posts index (when a static front page is set).
  *
- * @package YourRestaurant
+ * @package DineCraft
  */
 
 get_header();
 ?>
 <?php
 get_template_part( 'template-parts/page', 'header', array(
-	'eyebrow'  => __( 'Journal', 'your-restaurant' ),
-	'title'    => __( 'Our Blog', 'your-restaurant' ),
-	'subtitle' => __( 'Stories from the kitchen and beyond', 'your-restaurant' ),
+	'eyebrow'  => __( 'Journal', 'dinecraft' ),
+	'title'    => __( 'Our Blog', 'dinecraft' ),
+	'subtitle' => __( 'Stories from the kitchen and beyond', 'dinecraft' ),
 ) );
 ?>
 
@@ -25,7 +25,7 @@ get_template_part( 'template-parts/page', 'header', array(
 			</div>
 			<div class="yr-pagination"><?php the_posts_pagination(); ?></div>
 		<?php else : ?>
-			<p class="yr-empty"><?php esc_html_e( 'No blog posts yet.', 'your-restaurant' ); ?></p>
+			<p class="yr-empty"><?php esc_html_e( 'No blog posts yet.', 'dinecraft' ); ?></p>
 		<?php endif; ?>
 		<?php get_sidebar(); ?>
 	</div>

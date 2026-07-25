@@ -1,8 +1,8 @@
 <?php
 /**
- * Your Restaurant theme functions.
+ * DineCraft theme functions.
  *
- * @package YourRestaurant
+ * @package DineCraft
  *
  * Copyright (C) 2026 CreatesWowtech
  *
@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'YR_THEME_VERSION', '1.1.0' );
+define( 'YR_THEME_VERSION', '1.2.0' );
 define( 'YR_THEME_DIR', get_template_directory() );
 define( 'YR_THEME_URI', get_template_directory_uri() );
 
@@ -35,7 +35,7 @@ require_once YR_THEME_DIR . '/inc/customizer.php';
  * Theme setup.
  */
 function yr_theme_setup() {
-	load_theme_textdomain( 'your-restaurant', YR_THEME_DIR . '/languages' );
+	load_theme_textdomain( 'dinecraft', YR_THEME_DIR . '/languages' );
 
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
@@ -72,8 +72,8 @@ function yr_theme_setup() {
 	add_editor_style( 'assets/css/editor-style.css' );
 
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'your-restaurant' ),
-		'footer'  => __( 'Footer Menu', 'your-restaurant' ),
+		'primary' => __( 'Primary Menu', 'dinecraft' ),
+		'footer'  => __( 'Footer Menu', 'dinecraft' ),
 	) );
 
 	add_image_size( 'yr-banner', 1920, 1080, true );
@@ -96,9 +96,9 @@ add_action( 'after_setup_theme', 'yr_content_width', 0 );
 function yr_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => __( 'Blog Sidebar', 'your-restaurant' ),
+			'name'          => __( 'Blog Sidebar', 'dinecraft' ),
 			'id'            => 'sidebar-1',
-			'description'   => __( 'Widgets shown beside blog content.', 'your-restaurant' ),
+			'description'   => __( 'Widgets shown beside blog content.', 'dinecraft' ),
 			'before_widget' => '<section id="%1$s" class="yr-widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h3 class="yr-widget__title">',
@@ -108,9 +108,9 @@ function yr_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Footer Widgets', 'your-restaurant' ),
+			'name'          => __( 'Footer Widgets', 'dinecraft' ),
 			'id'            => 'footer-1',
-			'description'   => __( 'Optional widgets above the site footer credits.', 'your-restaurant' ),
+			'description'   => __( 'Optional widgets above the site footer credits.', 'dinecraft' ),
 			'before_widget' => '<section id="%1$s" class="yr-widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h4 class="yr-widget__title">',
@@ -160,7 +160,7 @@ add_action( 'wp_enqueue_scripts', 'yr_enqueue_assets' );
 /**
  * Admin notice when companion plugin is missing.
  */
-function yr_core_plugin_notice() {
+function dinecraft_plugin_notice() {
 	if ( ! current_user_can( 'activate_plugins' ) || post_type_exists( 'yr_banner' ) ) {
 		return;
 	}
@@ -169,15 +169,15 @@ function yr_core_plugin_notice() {
 		<p>
 			<?php
 			esc_html_e(
-				'Your Restaurant theme works best with the Your Restaurant Core plugin for banners, menus, testimonials, and reservations.',
-				'your-restaurant'
+				'DineCraft works best with the DineCraft Core plugin for banners, menus, testimonials, and reservations.',
+				'dinecraft'
 			);
 			?>
 		</p>
 	</div>
 	<?php
 }
-add_action( 'admin_notices', 'yr_core_plugin_notice' );
+add_action( 'admin_notices', 'dinecraft_plugin_notice' );
 
 /**
  * Custom comment markup with avatars.
@@ -198,7 +198,7 @@ function yr_comment_callback( $comment, $args, $depth ) {
 						$comment,
 						isset( $args['avatar_size'] ) ? (int) $args['avatar_size'] : 56,
 						'',
-						esc_attr( sprintf( __( 'Avatar for %s', 'your-restaurant' ), get_comment_author( $comment ) ) )
+						esc_attr( sprintf( __( 'Avatar for %s', 'dinecraft' ), get_comment_author( $comment ) ) )
 					);
 					?>
 				</div>
@@ -209,7 +209,7 @@ function yr_comment_callback( $comment, $args, $depth ) {
 							<?php
 							printf(
 								/* translators: 1: comment date, 2: comment time */
-								esc_html__( '%1$s at %2$s', 'your-restaurant' ),
+								esc_html__( '%1$s at %2$s', 'dinecraft' ),
 								esc_html( get_comment_date( '', $comment ) ),
 								esc_html( get_comment_time() )
 							);
@@ -220,7 +220,7 @@ function yr_comment_callback( $comment, $args, $depth ) {
 			</header>
 
 			<?php if ( '0' === (string) $comment->comment_approved ) : ?>
-				<p class="yr-comment__awaiting"><?php esc_html_e( 'Your comment is awaiting moderation.', 'your-restaurant' ); ?></p>
+				<p class="yr-comment__awaiting"><?php esc_html_e( 'Your comment is awaiting moderation.', 'dinecraft' ); ?></p>
 			<?php endif; ?>
 
 			<div class="yr-comment__content">

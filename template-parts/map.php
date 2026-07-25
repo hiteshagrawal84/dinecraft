@@ -2,7 +2,7 @@
 /**
  * Restaurant map section.
  *
- * @package YourRestaurant
+ * @package DineCraft
  */
 
 $settings = yr_get_settings();
@@ -15,12 +15,12 @@ $dirs     = 'https://www.google.com/maps/dir/?api=1&destination=' . rawurlencode
 		<div>
 			<div class="yr-map-label">
 				<?php echo yr_icon( 'map-pin', 15 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-				<?php esc_html_e( 'Find Us on the Map', 'your-restaurant' ); ?>
+				<?php esc_html_e( 'Find Us on the Map', 'dinecraft' ); ?>
 			</div>
 			<p class="yr-map-address"><?php echo esc_html( $settings['footer_address'] ); ?></p>
 		</div>
 		<a href="<?php echo esc_url( $dirs ); ?>" class="yr-btn yr-btn--primary yr-btn--sm" target="_blank" rel="noopener noreferrer">
-			<?php esc_html_e( 'Get Directions', 'your-restaurant' ); ?>
+			<?php esc_html_e( 'Get Directions', 'dinecraft' ); ?>
 			<?php echo yr_icon( 'external', 14 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 		</a>
 	</div>
@@ -30,7 +30,7 @@ $dirs     = 'https://www.google.com/maps/dir/?api=1&destination=' . rawurlencode
 				<?php
 				printf(
 					/* translators: %s: restaurant name. */
-					esc_html__( 'Open directions to %s in Google Maps', 'your-restaurant' ),
+					esc_html__( 'Open directions to %s in Google Maps', 'dinecraft' ),
 					esc_html( $settings['site_name'] )
 				);
 				?>

@@ -2,7 +2,7 @@
 /**
  * Helper functions.
  *
- * @package YourRestaurant
+ * @package DineCraft
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -368,7 +368,7 @@ function yr_badge_style( $badge ) {
  * Render star rating.
  */
 function yr_stars( $rating ) {
-	$output = '<div class="yr-stars" aria-label="' . esc_attr( sprintf( __( '%d out of 5 stars', 'your-restaurant' ), $rating ) ) . '">';
+	$output = '<div class="yr-stars" aria-label="' . esc_attr( sprintf( __( '%d out of 5 stars', 'dinecraft' ), $rating ) ) . '">';
 	for ( $i = 1; $i <= 5; $i++ ) {
 		$output .= '<span class="yr-star' . ( $i <= $rating ? ' yr-star--filled' : '' ) . '">★</span>';
 	}

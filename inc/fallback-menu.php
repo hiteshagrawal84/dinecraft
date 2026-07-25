@@ -2,7 +2,7 @@
 /**
  * Fallback navigation menu.
  *
- * @package YourRestaurant
+ * @package DineCraft
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -17,12 +17,12 @@ function yr_fallback_menu() {
 	$blog_url  = $blog_page ? get_permalink( $blog_page ) : home_url( '/blog' );
 
 	$links = array(
-		home_url( '/' )                                      => __( 'Home', 'your-restaurant' ),
-		yr_page_url( 'page-templates/template-menu.php' )    => __( 'Menu', 'your-restaurant' ),
-		yr_page_url( 'page-templates/template-book.php' )      => __( 'Book', 'your-restaurant' ),
-		yr_page_url( 'page-templates/template-about.php' )     => __( 'About', 'your-restaurant' ),
-		$blog_url                                              => __( 'Blog', 'your-restaurant' ),
-		yr_page_url( 'page-templates/template-contact.php' ) => __( 'Contact', 'your-restaurant' ),
+		home_url( '/' )                                      => __( 'Home', 'dinecraft' ),
+		yr_page_url( 'page-templates/template-menu.php' )    => __( 'Menu', 'dinecraft' ),
+		yr_page_url( 'page-templates/template-book.php' )      => __( 'Book', 'dinecraft' ),
+		yr_page_url( 'page-templates/template-about.php' )     => __( 'About', 'dinecraft' ),
+		$blog_url                                              => __( 'Blog', 'dinecraft' ),
+		yr_page_url( 'page-templates/template-contact.php' ) => __( 'Contact', 'dinecraft' ),
 	);
 
 	echo '<ul class="yr-nav__menu">';

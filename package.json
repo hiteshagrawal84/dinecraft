@@ -1,16 +1,16 @@
 {
-  "name": "wordpresstheme",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "dinecraft",
+  "version": "1.2.0",
+  "description": "DineCraft — a free WordPress restaurant theme for fine dining venues, cafés, and bistros.",
+  "private": true,
+  "license": "GPL-2.0-or-later",
+  "author": "CreatesWowtech",
+  "homepage": "https://www.createswowtech.com/themes/dinecraft-restaurant-wordpress-theme",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "screenshot": "node scripts/capture-screenshot.mjs"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
+  "devDependencies": {
     "playwright": "^1.61.1"
   }
 }

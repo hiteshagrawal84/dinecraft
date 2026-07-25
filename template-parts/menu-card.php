@@ -2,7 +2,7 @@
 /**
  * Menu card (menu page).
  *
- * @package YourRestaurant
+ * @package DineCraft
  */
 
 $item = $args['item'] ?? null;

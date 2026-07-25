@@ -10,7 +10,7 @@ $title    = $args['title'] ?? get_the_title();
 $subtitle = $args['subtitle'] ?? '';
 ?>
 <section class="yr-page-header">
-	<div class="yr-container">
+	<div class="yr-container yr-reveal is-visible">
 		<?php if ( $eyebrow ) : ?>
 			<p class="yr-eyebrow"><?php echo esc_html( $eyebrow ); ?></p>
 		<?php endif; ?>

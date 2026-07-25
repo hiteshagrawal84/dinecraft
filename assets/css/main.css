@@ -121,7 +121,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .yr-btn--outline-gold {
   background: transparent;
   color: var(--yr-accent);
-  border-color: rgba(168, 135, 91, 0.65);
+  border-color: var(--yr-accent);
   padding: 1.05rem 2.35rem;
 }
 .yr-btn--outline-gold:hover {
@@ -346,8 +346,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(10, 9, 8, 0.55) 0%, rgba(10, 9, 8, 0.28) 42%, rgba(10, 9, 8, 0.72) 100%),
-    linear-gradient(110deg, rgba(61, 42, 36, 0.28) 0%, transparent 55%);
+    linear-gradient(180deg, rgba(10, 9, 8, 0.42) 0%, rgba(10, 9, 8, 0.18) 40%, rgba(10, 9, 8, 0.62) 100%),
+    linear-gradient(110deg, rgba(61, 42, 36, 0.18) 0%, transparent 55%);
   pointer-events: none;
 }
 .yr-hero__content {

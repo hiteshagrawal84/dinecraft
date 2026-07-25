@@ -3,6 +3,8 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -24,7 +26,7 @@ $nav_links = array(
 <header class="yr-header" id="yr-header">
 	<div class="yr-container yr-header__inner">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="yr-logo">
-			<span class="yr-logo__icon">
+			<span class="yr-logo__icon" aria-hidden="true">
 				<?php
 				$logo_id = get_theme_mod( 'custom_logo' );
 				if ( $logo_id ) :
@@ -34,7 +36,7 @@ $nav_links = array(
 				endif;
 				?>
 			</span>
-			<span>
+			<span class="yr-logo__text">
 				<span class="yr-logo__name"><?php echo esc_html( $settings['site_name'] ); ?></span>
 				<span class="yr-logo__tagline"><?php echo esc_html( $settings['site_tagline'] ); ?></span>
 			</span>

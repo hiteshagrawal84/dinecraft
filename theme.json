@@ -1,0 +1,61 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.5/theme.json",
+	"version": 2,
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"palette": [
+				{ "slug": "background", "color": "#F1F0EC", "name": "Stone" },
+				{ "slug": "foreground", "color": "#141210", "name": "Ink" },
+				{ "slug": "primary", "color": "#1A1714", "name": "Primary Ink" },
+				{ "slug": "accent", "color": "#A8875B", "name": "Champagne" },
+				{ "slug": "secondary", "color": "#E6E4DE", "name": "Stone Wash" },
+				{ "slug": "muted", "color": "#6A655F", "name": "Muted" },
+				{ "slug": "dark", "color": "#0D0C0B", "name": "Noir" },
+				{ "slug": "cta", "color": "#3D2A24", "name": "Espresso" }
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "\"Cormorant Garamond\", \"Times New Roman\", Georgia, serif",
+					"slug": "display",
+					"name": "Display"
+				},
+				{
+					"fontFamily": "\"Outfit\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+					"slug": "ui",
+					"name": "UI"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "768px",
+			"wideSize": "1220px"
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--background)",
+			"text": "var(--wp--preset--color--foreground)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--ui)",
+			"fontWeight": "300",
+			"lineHeight": "1.65"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--display)",
+					"fontWeight": "500"
+				}
+			},
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--accent)"
+				}
+			}
+		}
+	}
+}

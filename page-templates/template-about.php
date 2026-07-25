@@ -19,7 +19,7 @@ get_template_part( 'template-parts/page', 'header', array(
 ) );
 ?>
 
-<section class="yr-section">
+<section class="yr-section" data-reveal>
 	<div class="yr-container yr-grid-2">
 		<div>
 			<p class="yr-eyebrow"><?php esc_html_e( 'Who We Are', 'your-restaurant' ); ?></p>
@@ -37,7 +37,7 @@ get_template_part( 'template-parts/page', 'header', array(
 	</div>
 </section>
 
-<section class="yr-section yr-section--dark">
+<section class="yr-section yr-section--dark" data-reveal>
 	<div class="yr-container">
 		<div class="yr-section__header yr-section__header--center">
 			<p class="yr-eyebrow"><?php esc_html_e( 'What Drives Us', 'your-restaurant' ); ?></p>

@@ -14,13 +14,12 @@ if ( ! $item ) {
 $image = yr_image_url( $item->ID, '_yr_image_url' );
 $badge = yr_meta( $item->ID, '_yr_badge' );
 $price = yr_meta( $item->ID, '_yr_price' );
-$color = function_exists( 'yr_badge_color' ) ? yr_badge_color( $badge ) : '#C9882A';
 ?>
 <a href="<?php echo esc_url( $menu_url ); ?>" class="yr-dish-card">
 	<div class="yr-dish-card__image">
 		<img src="<?php echo esc_url( $image ); ?>" alt="<?php echo esc_attr( $item->post_title ); ?>" width="500" height="380" loading="lazy" decoding="async" />
 		<?php if ( $badge ) : ?>
-			<span class="yr-badge" style="background:<?php echo esc_attr( $color ); ?>"><?php echo esc_html( $badge ); ?></span>
+			<span class="yr-badge"><?php echo esc_html( $badge ); ?></span>
 		<?php endif; ?>
 	</div>
 	<div class="yr-dish-card__body">

@@ -70,6 +70,7 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 	<?php endif; ?>
 
 	<div class="yr-hero__content">
+		<p class="yr-hero__brand"><?php echo esc_html( $settings['site_name'] ); ?></p>
 		<p class="yr-hero__eyebrow" data-hero-eyebrow><?php echo esc_html( $hero_slides[0]['subtitle'] ?: sprintf( __( 'Welcome to %s', 'your-restaurant' ), $settings['site_name'] ) ); ?></p>
 		<h1 class="yr-hero__title">
 			<?php echo esc_html( $hero_parts['before'] ); ?>
@@ -88,11 +89,11 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 	</div>
 </section>
 
-<section class="yr-stats">
+<section class="yr-stats" data-reveal>
 	<div class="yr-container yr-stats__grid">
 		<?php foreach ( $settings['stats'] as $i => $stat ) : ?>
 			<div class="yr-stat">
-				<span class="yr-stat__icon"><?php echo yr_icon( $stat_icons[ $i ] ?? 'award', 20 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></span>
+				<span class="yr-stat__icon"><?php echo yr_icon( $stat_icons[ $i ] ?? 'award', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></span>
 				<strong class="yr-stat__value"><?php echo esc_html( $stat['value'] ); ?></strong>
 				<span class="yr-stat__label"><?php echo esc_html( $stat['label'] ); ?></span>
 			</div>
@@ -100,7 +101,7 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 	</div>
 </section>
 
-<section class="yr-section">
+<section class="yr-section" data-reveal>
 	<div class="yr-container yr-grid-2">
 		<div class="yr-story-media">
 			<img src="<?php echo esc_url( $story_image ); ?>" alt="<?php echo esc_attr( $story['title'] ?? '' ); ?>" width="700" height="850" loading="lazy" decoding="async" />
@@ -122,7 +123,7 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 </section>
 
 <?php if ( $featured ) : ?>
-<section class="yr-section yr-section--dark">
+<section class="yr-section yr-section--dark" data-reveal>
 	<div class="yr-container">
 		<div class="yr-section__header yr-section__header--center">
 			<p class="yr-eyebrow"><?php esc_html_e( 'Culinary Highlights', 'your-restaurant' ); ?></p>
@@ -140,9 +141,9 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 </section>
 <?php endif; ?>
 
-<section class="yr-cta-band">
+<section class="yr-cta-band" data-reveal>
 	<div class="yr-cta-band__inner">
-		<p class="yr-eyebrow yr-eyebrow--light"><?php esc_html_e( '— Join Us Tonight —', 'your-restaurant' ); ?></p>
+		<p class="yr-eyebrow yr-eyebrow--light"><?php esc_html_e( 'Join Us Tonight', 'your-restaurant' ); ?></p>
 		<h2 class="yr-heading yr-heading--light"><?php esc_html_e( 'Reserve Your Table', 'your-restaurant' ); ?></h2>
 		<p class="yr-text yr-text--light"><?php esc_html_e( "Whether it's an intimate dinner for two or a celebration with loved ones, we'll make it unforgettable.", 'your-restaurant' ); ?></p>
 		<a href="<?php echo esc_url( $book_url ); ?>" class="yr-btn yr-btn--accent"><?php esc_html_e( 'Make a Reservation', 'your-restaurant' ); ?></a>
@@ -150,7 +151,7 @@ $badge_lines = preg_split( '/\r\n|\r|\n/', $story['badge_label'] ?? '' );
 </section>
 
 <?php if ( $testimonials ) : ?>
-<section class="yr-section">
+<section class="yr-section" data-reveal>
 	<div class="yr-container">
 		<div class="yr-section__header yr-section__header--center">
 			<p class="yr-eyebrow"><?php esc_html_e( 'Guest Voices', 'your-restaurant' ); ?></p>

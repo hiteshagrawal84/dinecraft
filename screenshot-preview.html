@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Restaurant — Homepage Preview</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <style>
     /* Preview-only: full page capture helpers */
@@ -12,6 +11,7 @@
     .yr-nav { display: flex !important; }
     .yr-header__cta--desktop { display: inline-flex !important; }
     .yr-nav__toggle { display: none !important; }
+    .yr-reveal { opacity: 1; transform: none; }
   </style>
 </head>
 <body>
@@ -21,7 +21,7 @@
       <span class="yr-logo__icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.245.077-.48.22-.67L19 12.5V7a5 5 0 0 0-10 0v5.5l.78 1.38c.143.19.22.425.22.67V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></svg>
       </span>
-      <span>
+      <span class="yr-logo__text">
         <span class="yr-logo__name">Your Restaurant</span>
         <span class="yr-logo__tagline">Fine Dining</span>
       </span>
@@ -50,6 +50,7 @@
     <button type="button" class="yr-hero__dot"></button>
   </div>
   <div class="yr-hero__content">
+    <p class="yr-hero__brand">Your Restaurant</p>
     <p class="yr-hero__eyebrow">Welcome to Your Restaurant</p>
     <h1 class="yr-hero__title">Where Every Meal<br><em>Becomes a Memory</em></h1>
     <p class="yr-hero__subtitle">An intimate fine dining experience where seasonal ingredients, expert technique, and warm hospitality converge.</p>
@@ -94,7 +95,7 @@
       <a href="#" class="yr-dish-card">
         <div class="yr-dish-card__image">
           <img src="assets/images/placeholders/dish-1.jpg" alt="Duck" />
-          <span class="yr-badge" style="background:#6B1E2A">Signature</span>
+          <span class="yr-badge">Signature</span>
         </div>
         <div class="yr-dish-card__body">
           <div class="yr-dish-card__head"><h3>Seared Duck Breast</h3><span class="yr-dish-card__price">₹ 185</span></div>
@@ -104,7 +105,7 @@
       <a href="#" class="yr-dish-card">
         <div class="yr-dish-card__image">
           <img src="assets/images/placeholders/dish-2.jpg" alt="Salmon" />
-          <span class="yr-badge" style="background:#C9882A">Favourite</span>
+          <span class="yr-badge">Favourite</span>
         </div>
         <div class="yr-dish-card__body">
           <div class="yr-dish-card__head"><h3>Atlantic Salmon</h3><span class="yr-dish-card__price">₹ 165</span></div>
@@ -127,7 +128,7 @@
 
 <section class="yr-cta-band">
   <div class="yr-cta-band__inner">
-    <p class="yr-eyebrow yr-eyebrow--light">— Join Us Tonight —</p>
+    <p class="yr-eyebrow yr-eyebrow--light">Join Us Tonight</p>
     <h2 class="yr-heading yr-heading--light">Reserve Your Table</h2>
     <p class="yr-text yr-text--light">Whether it's an intimate dinner for two or a celebration with loved ones, we'll make it unforgettable.</p>
     <a href="#" class="yr-btn yr-btn--accent">Make a Reservation</a>

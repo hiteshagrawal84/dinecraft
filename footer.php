@@ -18,9 +18,9 @@ $emails = ! empty( $settings['contact_emails'] ) ? $settings['contact_emails'] :
 	<div class="yr-footer__line"></div>
 	<div class="yr-container yr-footer__grid">
 		<div class="yr-footer__brand">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="yr-logo" style="margin-bottom:1.5rem;">
-				<span class="yr-logo__icon"><?php echo yr_icon( 'chef-hat', 20 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></span>
-				<span>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="yr-logo">
+				<span class="yr-logo__icon" aria-hidden="true"><?php echo yr_icon( 'chef-hat', 20 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></span>
+				<span class="yr-logo__text">
 					<span class="yr-logo__name"><?php echo esc_html( $settings['site_name'] ); ?></span>
 					<span class="yr-logo__tagline"><?php echo esc_html( $settings['site_tagline'] ); ?></span>
 				</span>

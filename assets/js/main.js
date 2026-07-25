@@ -38,10 +38,6 @@
   if (hero) {
     var slides = hero.querySelectorAll('[data-hero-slide]');
     var dots = hero.querySelectorAll('[data-hero-dot]');
-    var eyebrow = hero.querySelector('[data-hero-eyebrow]');
-    var subtitles = Array.prototype.map.call(slides, function (_, i) {
-      return dots[i] ? dots[i].getAttribute('data-subtitle') || '' : '';
-    });
     var current = 0;
     var timer;
 
@@ -98,6 +94,30 @@
         item.style.display = filter === 'all' || cat === filter ? '' : 'none';
       });
     });
+  }
+
+  // Scroll reveal for luxury section presence
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if (revealEls.length) {
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      revealEls.forEach(function (el) {
+        el.classList.add('yr-reveal', 'is-visible');
+      });
+    } else {
+      revealEls.forEach(function (el) {
+        el.classList.add('yr-reveal');
+      });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      revealEls.forEach(function (el) { io.observe(el); });
+    }
   }
 
 })();

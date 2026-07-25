@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Restaurant — Homepage Preview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    /* Preview-only: full page capture helpers */
+    body { margin: 0; }
+    .yr-nav { display: flex !important; }
+    .yr-header__cta--desktop { display: inline-flex !important; }
+    .yr-nav__toggle { display: none !important; }
+  </style>
+</head>
+<body>
+<header class="yr-header is-scrolled" id="yr-header">
+  <div class="yr-container yr-header__inner">
+    <a href="#" class="yr-logo">
+      <span class="yr-logo__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.245.077-.48.22-.67L19 12.5V7a5 5 0 0 0-10 0v5.5l.78 1.38c.143.19.22.425.22.67V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></svg>
+      </span>
+      <span>
+        <span class="yr-logo__name">Your Restaurant</span>
+        <span class="yr-logo__tagline">Fine Dining</span>
+      </span>
+    </a>
+    <nav class="yr-nav">
+      <ul class="yr-nav__menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Book a Table</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="yr-btn yr-btn--accent yr-btn--sm yr-header__cta yr-header__cta--desktop">Reserve</a>
+  </div>
+</header>
+
+<main class="yr-main">
+<section class="yr-hero">
+  <div class="yr-hero__slide is-active" style="background-image:url('assets/images/placeholders/hero-1.jpg')"></div>
+  <div class="yr-hero__overlay"></div>
+  <div class="yr-hero__dots">
+    <button type="button" class="yr-hero__dot is-active"></button>
+    <button type="button" class="yr-hero__dot"></button>
+    <button type="button" class="yr-hero__dot"></button>
+  </div>
+  <div class="yr-hero__content">
+    <p class="yr-hero__eyebrow">Welcome to Your Restaurant</p>
+    <h1 class="yr-hero__title">Where Every Meal<br><em>Becomes a Memory</em></h1>
+    <p class="yr-hero__subtitle">An intimate fine dining experience where seasonal ingredients, expert technique, and warm hospitality converge.</p>
+    <div class="yr-hero__actions">
+      <a href="#" class="yr-btn yr-btn--accent">Reserve a Table</a>
+      <a href="#" class="yr-btn yr-btn--outline-light">Explore Menu →</a>
+    </div>
+  </div>
+</section>
+
+<section class="yr-stats">
+  <div class="yr-container yr-stats__grid">
+    <div class="yr-stat"><span class="yr-stat__icon">◆</span><strong class="yr-stat__value">12</strong><span class="yr-stat__label">Years of Excellence</span></div>
+    <div class="yr-stat"><span class="yr-stat__icon">◆</span><strong class="yr-stat__value">40K+</strong><span class="yr-stat__label">Happy Guests</span></div>
+    <div class="yr-stat"><span class="yr-stat__icon">◆</span><strong class="yr-stat__value">4.9</strong><span class="yr-stat__label">Average Rating</span></div>
+    <div class="yr-stat"><span class="yr-stat__icon">◆</span><strong class="yr-stat__value">7</strong><span class="yr-stat__label">Days a Week</span></div>
+  </div>
+</section>
+
+<section class="yr-section">
+  <div class="yr-container yr-grid-2">
+    <div class="yr-story-media">
+      <img src="assets/images/placeholders/story.jpg" alt="Chef plating" />
+      <div class="yr-story-badge"><strong>12</strong><span>Years of Excellence</span></div>
+    </div>
+    <div>
+      <p class="yr-eyebrow">Our Story</p>
+      <h2 class="yr-heading">A Labour of Love,<br><em>Since 2012</em></h2>
+      <p class="yr-text">Your Restaurant was born from a simple conviction: that great food is inseparable from great company.</p>
+      <a href="#" class="yr-link-cta">Discover Our Story <span class="yr-link-cta__icon">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="yr-section yr-section--dark">
+  <div class="yr-container">
+    <div class="yr-section__header yr-section__header--center">
+      <p class="yr-eyebrow">Culinary Highlights</p>
+      <h2 class="yr-heading yr-heading--light">Signature Creations</h2>
+    </div>
+    <div class="yr-grid-3">
+      <a href="#" class="yr-dish-card">
+        <div class="yr-dish-card__image">
+          <img src="assets/images/placeholders/dish-1.jpg" alt="Duck" />
+          <span class="yr-badge" style="background:#6B1E2A">Signature</span>
+        </div>
+        <div class="yr-dish-card__body">
+          <div class="yr-dish-card__head"><h3>Seared Duck Breast</h3><span class="yr-dish-card__price">₹ 185</span></div>
+          <p class="yr-dish-card__desc">48-hour confit, cherry reduction, truffle jus</p>
+        </div>
+      </a>
+      <a href="#" class="yr-dish-card">
+        <div class="yr-dish-card__image">
+          <img src="assets/images/placeholders/dish-2.jpg" alt="Salmon" />
+          <span class="yr-badge" style="background:#C9882A">Favourite</span>
+        </div>
+        <div class="yr-dish-card__body">
+          <div class="yr-dish-card__head"><h3>Atlantic Salmon</h3><span class="yr-dish-card__price">₹ 165</span></div>
+          <p class="yr-dish-card__desc">Pan-seared, lemon beurre blanc, caramelised fennel</p>
+        </div>
+      </a>
+      <a href="#" class="yr-dish-card">
+        <div class="yr-dish-card__image">
+          <img src="assets/images/placeholders/dish-3.jpg" alt="Salad" />
+        </div>
+        <div class="yr-dish-card__body">
+          <div class="yr-dish-card__head"><h3>Garden Harvest Salad</h3><span class="yr-dish-card__price">₹ 95</span></div>
+          <p class="yr-dish-card__desc">Seasonal vegetables, pomegranate, aged balsamic</p>
+        </div>
+      </a>
+    </div>
+    <div class="yr-text-center yr-mt-12"><a href="#" class="yr-btn yr-btn--outline-gold">View Full Menu</a></div>
+  </div>
+</section>
+
+<section class="yr-cta-band">
+  <div class="yr-cta-band__inner">
+    <p class="yr-eyebrow yr-eyebrow--light">— Join Us Tonight —</p>
+    <h2 class="yr-heading yr-heading--light">Reserve Your Table</h2>
+    <p class="yr-text yr-text--light">Whether it's an intimate dinner for two or a celebration with loved ones, we'll make it unforgettable.</p>
+    <a href="#" class="yr-btn yr-btn--accent">Make a Reservation</a>
+  </div>
+</section>
+
+<section class="yr-section">
+  <div class="yr-container">
+    <div class="yr-section__header yr-section__header--center">
+      <p class="yr-eyebrow">Guest Voices</p>
+      <h2 class="yr-heading">What Our Guests Say</h2>
+    </div>
+    <div class="yr-grid-3">
+      <article class="yr-testimonial-card">
+        <div class="yr-testimonial-card__stars">★★★★★</div>
+        <blockquote>"Your Restaurant delivers an extraordinary culinary narrative."</blockquote>
+        <div class="yr-testimonial-card__footer"><div class="yr-testimonial-card__name">Amira Al-Hassan</div><div class="yr-testimonial-card__role">Food Critic</div></div>
+      </article>
+      <article class="yr-testimonial-card">
+        <div class="yr-testimonial-card__stars">★★★★★</div>
+        <blockquote>"The finest dining experience I've encountered in Ahmedabad."</blockquote>
+        <div class="yr-testimonial-card__footer"><div class="yr-testimonial-card__name">James Whitmore</div><div class="yr-testimonial-card__role">Travel + Leisure Editor</div></div>
+      </article>
+      <article class="yr-testimonial-card">
+        <div class="yr-testimonial-card__stars">★★★★★</div>
+        <blockquote>"Every celebration — Your Restaurant is the only place that matches the occasion."</blockquote>
+        <div class="yr-testimonial-card__footer"><div class="yr-testimonial-card__name">Farah Nasser</div><div class="yr-testimonial-card__role">Lifestyle Influencer</div></div>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="yr-footer">
+  <div class="yr-footer__line"></div>
+  <div class="yr-container yr-footer__grid">
+    <div class="yr-footer__brand">
+      <p style="margin-top:1rem;color:rgba(250,246,240,.55);font-size:.85rem;">A culinary journey through flavors, tradition, and artistry.</p>
+    </div>
+    <div><h4>Navigation</h4><ul class="yr-footer__links"><li><a href="#">Home</a></li><li><a href="#">Menu</a></li></ul></div>
+    <div><h4>Hours</h4><ul class="yr-footer__hours"><li><div class="yr-footer__hours-day">Mon – Thu</div><div class="yr-footer__hours-time">12 PM – 10 PM</div></li></ul></div>
+    <div><h4>Contact</h4><ul class="yr-footer__contact"><li><span>Ahmedabad, Gujarat</span></li></ul></div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,147 @@
+# Copyright (C) 2026 CreatesWowtech
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Your Restaurant 1.1.0\n"
+"Report-Msgid-Bugs-To: https://www.createswowtech.com\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: CreatesWowtech\n"
+"X-Domain: your-restaurant\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Primary Menu"
+msgstr ""
+
+msgid "Footer Menu"
+msgstr ""
+
+msgid "Blog Sidebar"
+msgstr ""
+
+msgid "Footer Widgets"
+msgstr ""
+
+msgid "Skip to content"
+msgstr ""
+
+msgid "Home"
+msgstr ""
+
+msgid "Menu"
+msgstr ""
+
+msgid "Our Menu"
+msgstr ""
+
+msgid "Book a Table"
+msgstr ""
+
+msgid "About Us"
+msgstr ""
+
+msgid "Blog"
+msgstr ""
+
+msgid "Contact"
+msgstr ""
+
+msgid "Reserve"
+msgstr ""
+
+msgid "Reserve a Table"
+msgstr ""
+
+msgid "Page Not Found"
+msgstr ""
+
+msgid "Back to Home"
+msgstr ""
+
+msgid "Back to Blog"
+msgstr ""
+
+msgid "No results found. Please try a different search."
+msgstr ""
+
+msgid "No blog posts yet."
+msgstr ""
+
+msgid "No content found."
+msgstr ""
+
+msgid "Tags:"
+msgstr ""
+
+msgid "Pages:"
+msgstr ""
+
+msgid "Leave a Comment"
+msgstr ""
+
+msgid "Post Comment"
+msgstr ""
+
+msgid "Cancel reply"
+msgstr ""
+
+msgid "Older comments"
+msgstr ""
+
+msgid "Newer comments"
+msgstr ""
+
+msgid "Comments are closed."
+msgstr ""
+
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+msgid "Restaurant Options"
+msgstr ""
+
+msgid "Restaurant Name"
+msgstr ""
+
+msgid "Restaurant Tagline"
+msgstr ""
+
+msgid "Hero Title"
+msgstr ""
+
+msgid "Hero Subtitle"
+msgstr ""
+
+msgid "Footer Description"
+msgstr ""
+
+msgid "Address"
+msgstr ""
+
+msgid "Phone"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Copyright Text"
+msgstr ""
+
+msgid "Map Latitude"
+msgstr ""
+
+msgid "Map Longitude"
+msgstr ""
+
+msgid "Restaurant Card"
+msgstr ""
+
+msgid "Testimonial Quote"
+msgstr ""
+
+msgid "Reserve Your Table"
+msgstr ""
+
+msgid "Opening Hours Card"
+msgstr ""
